@@ -47,19 +47,32 @@ returns the length of the shortest tour (not the tour itself).
 
 Test your new function; I've provided some basic testing code in `code.test.js`.
 
-## Runtime Analysis
-
-What is the worst-case asymptotic time complexity of your implementation? What
-is the worst-case asymptotic memory complexity? Add your answer, including your
-reasoning, to this markdown file.
-
-## Additional
+## Visualization
 
 I created a visualization of this inside the `/visualization` folder. I know it was not required but I really wanted to see what it looked like when it ran. Plus the medium article I read had one and I wanted to be hip and create one too.
 
 I hope you enjoy and let me know if it breaks. It is mostly stable but the input fields **_MUST_** be numbers xD. The larger your screen the better. I hard coded the width/height of the canvas and dont plan to make it responsive.
 
+Here are some photos which demonstrate the visualization on diferent inputs.
+
+![Visualization With Large Input](./vis-1.png)
+![Visualization With Large Input Solved](./vis-2-solved.png)
+![Visualization With Small Input](./vis-3-unsolved.png)
+
+## Runtime Analysis
+
+**Overview**
+My `tsp_ls()` function uses a local search heuristic to find a solution for the **Traveling Salesman Problem** (TSP). The function performs a set of iterations, each involving a swap of a part of the current route (`optSwap`) and checking the length of the new route (`calculateRouteLength`).
+
+- `randomRoute(n)`: This function has a complexity of $O(n)$ as it creates a route array and shuffles it. Creating the array is linear and so is the shuffle so we get $O(2n) = $O(n)$.
+
+- `calculateRouteLength(route, distances)`: This function calculates the total distance of the given route and also has a linear complexity. Since the function simply traverses the input and sums up the distances this provides a complexity of $O(n)$.
+
+- `optSwap(route)`: This function modifies the route by performing a swap operation. This function has a wors-case complexity when the amount of shuffles is maximized. This means it will be $\Theta(n - 1)$ as we never shuffle the first element. This obviously simplifies to $\Theta(n)$.
+
+The main loop in `tsp_ls()` iterates `maxIterations` times, executing the `optSwap()` and `calculateRouteLength()` functions in each iteration. The `maxIterations` is simply $n^2$ therefore, the worst-case asymptotic time complexity of the implementation is approximately $\Theta(maxIterations * n)$. This simplfiies to $\Theta(n^3)$.
+
 ## Resources
 
-https://slowandsteadybrain.medium.com/traveling-salesman-problem-ce78187cf1f3
-https://en.wikipedia.org/wiki/2-opt
+- https://slowandsteadybrain.medium.com/traveling-salesman-problem-ce78187cf1f3
+- https://en.wikipedia.org/wiki/2-opt

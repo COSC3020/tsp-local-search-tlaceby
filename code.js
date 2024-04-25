@@ -2,11 +2,12 @@
  * @param {number[][]} distances
  */
 function tsp_ls(distances) {
-  // TODO: Impliment a distance minimization check instead of arbitrary distances.
-  // An aribitary large number of iterations to test is the stopping criteria
-  // From what I read this should be when the distance is being minimized aka the delta distance approaches zero.
-  const maxIterations = 1_000_000;
   const n = distances.length;
+
+  // I think if we iterate n^2 times this will then make a sufficiently large number of total iterations.
+  // If I wanted to optimize this more I would include some test about the score and when its delta between
+  // improvements is minimized I would stop iterating. I bring this up in the tsp-comparison problem.
+  const maxIterations = n * n;
 
   let route = randomRoute(n);
   let shortestDistance = calculateRouteLength(route, distances);
