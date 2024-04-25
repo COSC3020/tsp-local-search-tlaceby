@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      body {
+        padding: 50px;
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+        background-color: #1d1b23;
+      }
+
+      #controls {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 15px;
+        border: whitesmoke;
+        color: white;
+      }
+
+      label {
+        margin-top: 10px;
+        display: block;
+      }
+
+      input {
+        border-radius: 6px;
+        padding: 8px 10px;
+      }
+
+      button {
+        border-radius: 6px;
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 1px solid whitesmoke;
+        color: whitesmoke;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: whitesmoke;
+        color: #222;
+      }
+
+      button:disabled {
+        cursor: default;
+        background: transparent;
+        border: transparent;
+        color: transparent;
+      }
+
+      #stats {
+        text-align: left;
+        color: whitesmoke;
+        position: absolute;
+        top: 20px;
+        right: 5%;
+      }
+
+      p {
+        margin-top: 10px;
+        color: #ddd;
+        font-size: 0.9em;
+        max-width: 700px;
+      }
+
+      a {
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="controls">
+      <p>
+        Visualization of the TSP Algorithm using the
+        <strong>2-opt algorithm</strong>. View the code on
+        <a
+          target="_blank"
+          href="https://github.com/COSC3020/tsp-local-search-tlaceby"
+          >Github</a
+        >
+      </p>
+      <label for="nodes">Node Count</label>
+      <input type="number" id="nodes" min="2" max="1000" value="50" />
+      <br />
+
+      <label for="delay">Delay (ms)</label>
+      <input type="number" id="delay" min="1" max="5000" value="25" />
+      <br />
+
+      <label for="iterations">Number Iterations</label>
+      <input
+        type="number"
+        id="iterations"
+        min="10"
+        max="1000000"
+        value="100000"
+      />
+
+      <br /><br />
+      <button id="start">Start</button>
+    </div>
+    <canvas id="canvas" width="1000px" height="800px"></canvas>
+
+    <div id="stats">
+      <h1 id="iteration-count">Iteration: 0</h1>
+      <h1 id="distance">Distance: Infinity</h1>
+    </div>
+    <script src="./visualization.js" defer></script>
+  </body>
+</html>

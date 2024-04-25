@@ -53,6 +53,12 @@ What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
 
+## Additional
+
+I created a visualization of this inside the `/visualization` folder. I know it was not required but I really wanted to see what it looked like when it ran. Plus the medium article I read had one and I wanted to be hip and create one too.
+
+I hope you enjoy and let me know if it breaks. It is mostly stable but the input fields **_MUST_** be numbers xD. The larger your screen the better. I hard coded the width/height of the canvas and dont plan to make it responsive.
+
 ## Resources
 
 https://slowandsteadybrain.medium.com/traveling-salesman-problem-ce78187cf1f3
