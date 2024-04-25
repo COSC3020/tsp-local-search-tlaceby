@@ -1,4 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/C_k9ew3E)
+
 # Traveling Salesperson Problem -- Local Search
 
 This exercise is about the Traveling Salesperson Problem I mentioned in the
@@ -6,7 +7,7 @@ lecture on NP-hard problems -- given a set of cities, determine the length of
 the shortest tour that visits all of them. We can get from any city to any other
 city, i.e. the graph of cities is completely connected. We consider the version
 of the Traveling Salesperson Problem that finds the shortest tour to visit $n$
-cities, starting at a city and ending at the $n$ th city; it *does not* go
+cities, starting at a city and ending at the $n$ th city; it _does not_ go
 back to the start. The start city may be any of the cities. Remember that the
 graph for a TSP is undirected, i.e. the cost is the same in either direction.
 
@@ -51,3 +52,8 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+## Resources
+
+https://slowandsteadybrain.medium.com/traveling-salesman-problem-ce78187cf1f3
+https://en.wikipedia.org/wiki/2-opt
