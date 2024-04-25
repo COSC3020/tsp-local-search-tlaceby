@@ -61,9 +61,6 @@ Here are some photos which demonstrate the visualization on diferent inputs.
 
 ## Runtime Analysis
 
-**Overview**
-My `tsp_ls()` function uses a local search heuristic to find a solution for the **Traveling Salesman Problem** (TSP). The function performs a set of iterations, each involving a swap of a part of the current route (`optSwap`) and checking the length of the new route (`calculateRouteLength`).
-
 - `randomRoute(n)`: This function has a complexity of $O(n)$ as it creates a route array and shuffles it. Creating the array is linear and so is the shuffle so we get $O(2n) = $O(n)$.
 
 - `calculateRouteLength(route, distances)`: This function calculates the total distance of the given route and also has a linear complexity. Since the function simply traverses the input and sums up the distances this provides a complexity of $O(n)$.
