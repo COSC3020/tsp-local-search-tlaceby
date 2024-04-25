@@ -61,7 +61,7 @@ Here are some photos which demonstrate the visualization on diferent inputs.
 
 ## Runtime Analysis
 
-- `randomRoute(n)`: This function has a complexity of $O(n)$ as it creates a route array and shuffles it. Creating the array is linear and so is the shuffle so we get $O(2n) = $O(n)$.
+- `randomRoute(n)`: This function has a complexity of $O(n)$ as it creates a route array and shuffles it. Creating the array is linear and so is the shuffle so we get $O(2n) = O(n)$.
 
 - `calculateRouteLength(route, distances)`: This function calculates the total distance of the given route and also has a linear complexity. Since the function simply traverses the input and sums up the distances this provides a complexity of $O(n)$.
 
